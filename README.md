@@ -5,6 +5,8 @@ places it studies, and how both have changed. Built from 38,746 articles publish
 2000 and 2025 in the 74 journals listed solely under Criminology & Penology in the 2024
 Journal Citation Reports.
 
+**[View the visualisations &rarr;](https://zarina-vakhitova.github.io/criminology_geography/)**
+
 ## The files
 
 | File | What it shows |
@@ -25,7 +27,8 @@ Keep all four files in the same folder — the menu links to the others by relat
 To publish with GitHub Pages: commit the files, then in the repository go to
 **Settings → Pages**, set *Source* to "Deploy from a branch", and choose your branch and
 either the repository root or a `/docs` folder. The site appears at
-`https://<username>.github.io/<repository>/` within a few minutes, landing on `index.html`.
+<https://zarina-vakhitova.github.io/criminology_geography/> within a few minutes, landing on
+`index.html`.
 
 Two things to know. Uploading an HTML file to GitHub does not by itself make it viewable —
 without Pages enabled, clicking the file shows its source. And Pages on a private repository
