@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The geography of criminological knowledge &mdash; visualisations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#E9EDF0;--panel:#F8FAFB;--ink:#16202B;--muted:#647787;--rule:#C6D0D8;--plum:#7B2D4E}
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;
+       font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:56px 24px 80px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+           text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(2.1rem,5vw,3.4rem);
+     line-height:1.04;letter-spacing:-.02em;margin:0 0 20px;max-width:20ch}
+  .lede{font-size:clamp(1rem,2vw,1.14rem);max-width:62ch;margin:0 0 34px;color:#2B3A48}
+  .facts{display:flex;flex-wrap:wrap;gap:34px;padding:22px 0;border-top:1px solid var(--rule);
+         border-bottom:1px solid var(--rule);margin-bottom:44px}
+  .fact .v{font-family:"Fraunces",Georgia,serif;font-size:1.75rem;font-weight:600;line-height:1}
+  .fact .l{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--muted);margin-top:7px;max-width:20ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--panel);
+         border:1px solid var(--rule);border-radius:3px;overflow:hidden;
+         transition:transform .18s,box-shadow .18s,border-color .18s}
+  a.card:hover,a.card:focus-visible{transform:translateY(-3px);border-color:var(--ink);
+         box-shadow:0 8px 22px rgba(22,32,43,.10);outline:none}
+  .thumb{background:#EDF1F4;border-bottom:1px solid var(--rule);padding:0}
+  .thumb svg{display:block;width:100%;height:auto}
+  .body{padding:20px 22px 24px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+          text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  .body h2{font-family:"Fraunces",Georgia,serif;font-size:1.28rem;font-weight:600;line-height:1.2;margin:0 0 9px}
+  .body p{margin:0;font-size:14.5px;color:#2B3A48}
+  .go{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--plum)}
+  .about{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);
+         display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+  .about h3{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+            text-transform:uppercase;color:var(--muted);margin:0 0 9px;font-weight:500}
+  .about p{margin:0;font-size:14px;color:#2B3A48}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Companion visualisations</p>
+  <h1>The geography of criminological knowledge</h1>
+  <p class="lede">Three views of who writes criminology, which places it studies, and how that has changed. Built from 38,746 articles published in 74 criminology journals between 2000 and 2025.</p>
+
+  <div class="facts">
+    <div class="fact"><div class="v">38,746</div><div class="l">articles</div></div>
+    <div class="fact"><div class="v">74</div><div class="l">journals</div></div>
+    <div class="fact"><div class="v">26</div><div class="l">years</div></div>
+    <div class="fact"><div class="v">169</div><div class="l">countries studied</div></div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="criminology_focus_map.html">
+      <div class="thumb"><svg id="t2" viewBox="0 0 300 140" aria-hidden="true"></svg></div>
+      <div class="body">
+        <p class="kicker">169 countries</p>
+        <h2>Which countries criminology studies</h2>
+        <p>A world map of research attention. Each country shaded by how many articles take it as their subject, from more than seven thousand down to none at all.</p>
+        <span class="go">Open the map &rarr;</span>
+      </div>
+    </a>
+
+    <a class="card" href="criminology_decoupling.html">
+      <div class="thumb"><svg id="t3" viewBox="0 0 300 140" aria-hidden="true"></svg></div>
+      <div class="body">
+        <p class="kicker">2000 to 2025</p>
+        <h2>Economic weight and a place in the field</h2>
+        <p>Four regions traced through twenty-six years, comparing each one&rsquo;s share of the world economy with its share of criminology authorship.</p>
+        <span class="go">Play the animation &rarr;</span>
+      </div>
+    </a>
+    <a class="card" href="criminology_country_paths.html">
+      <div class="thumb"><svg id="t4" viewBox="0 0 300 140" aria-hidden="true"></svg></div>
+      <div class="body">
+        <p class="kicker">33 countries</p>
+        <h2>The same comparison, country by country</h2>
+        <p>Choose any of the 33 countries with a substantial presence in the corpus and follow its path against the line where economic weight and criminological output are equal.</p>
+        <span class="go">Choose a country &rarr;</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="about">
+    <div><h3>What the data is</h3><p>Every article published between 2000 and 2025 in the journals listed solely under Criminology &amp; Penology in the 2024 Journal Citation Reports, indexed in Web of Science. Authorship is attributed to the corresponding author&rsquo;s country.</p></div>
+    <div><h3>What is published here</h3><p>Journal-level and country-level aggregates only. The underlying bibliographic records are licensed from Clarivate and are not redistributed.</p></div>
+    <div><h3>The study</h3><p>These pages accompany a research article on the geography of criminological knowledge. Add the citation and link here once it is available.</p></div>
+  </div>
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const mk=(n,a={})=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e};
+
+
+/* 1. map: one square per country studied, sorted by article count */
+(()=>{
+  const C=[7239,3158,1733,1365,871,595,574,385,349,298,262,257,255,236,236,233,233,230,228,224,224,200,182,182,173,162,161,147,137,135,112,109,108,99,87,83,81,72,70,59,59,59,55,54,53,51,49,44,44,43,42,41,38,37,34,33,31,30,30,27,26,26,25,25,21,20,20,19,19,19,18,16,15,15,14,14,12,12,12,11,11,11,11,11,11,10,10,10,10,9,9,9,9,8,8,8,8,8,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], s=document.getElementById("t2");
+  const cols=26, cell=10.2, x0=14, y0=14;
+  const col=n=>n>=1000?"#5C1F3A":n>=200?"#7B2D4E":n>=50?"#A8556E":n>=10?"#C98E9F":"#E4C4CD";
+  C.forEach((n,i)=>{
+    s.appendChild(mk("rect",{x:(x0+(i%cols)*cell).toFixed(1),y:(y0+Math.floor(i/cols)*cell).toFixed(1),
+      width:"8.2",height:"8.2",rx:"1",fill:col(n)}));
+  });
+})();
+
+/* 2. decoupling: the four real paths */
+(()=>{
+  const D={"China":[[6.52,0.34],[6.89,0.34],[7.33,0.68],[7.78,0.3],[8.15,1.14],[8.69,0.48],[9.3,0.55],[10.09,0.4],[10.76,0.1],[11.85,0.44],[12.47,0.43],[13.14,0.64],[13.73,0.47],[14.34,1.1],[14.89,0.88],[15.42,0.5],[15.95,0.75],[16.42,0.6],[16.91,0.82],[17.43,1.01],[18.35,1.55],[18.7,1.27],[18.61,1.47],[19.0,1.49],[19.29,1.57],[19.59,2.66]],"India":[[4.04,0.0],[4.14,0.0],[4.18,0.0],[4.35,0.0],[4.46,0.0],[4.61,0.16],[4.73,0.28],[4.84,0.4],[4.85,0.19],[5.27,0.09],[5.44,0.07],[5.51,0.07],[5.63,0.27],[5.8,0.18],[6.02,0.47],[6.29,0.45],[6.6,0.45],[6.79,0.65],[6.97,0.44],[7.04,0.68],[6.82,0.73],[7.03,1.02],[7.29,1.11],[7.57,0.97],[7.84,1.38],[8.16,1.17]],"Core Anglosphere":[[26.41,94.93],[26.12,94.84],[25.91,94.2],[25.69,95.8],[25.32,93.43],[25.03,85.55],[24.44,85.58],[23.75,82.74],[23.15,79.63],[22.69,80.07],[22.15,75.46],[21.66,76.5],[21.47,73.22],[21.23,71.75],[21.07,72.19],[20.98,73.37],[20.71,70.97],[20.48,72.73],[20.32,73.64],[20.21,69.9],[20.18,71.15],[20.15,69.5],[20.05,68.47],[19.9,66.06],[19.72,65.35],[19.5,67.4]],"Continental Europe":[[23.2,2.03],[23.16,4.47],[22.81,3.75],[22.25,3.6],[21.76,3.43],[21.26,8.03],[20.96,5.77],[20.59,9.75],[20.22,12.16],[19.52,14.46],[18.95,14.84],[18.58,14.74],[17.9,17.74],[17.34,16.79],[17.05,15.32],[16.9,15.58],[16.69,17.52],[16.55,15.3],[16.33,14.78],[16.18,16.09],[15.75,15.31],[15.73,16.4],[15.74,16.67],[15.33,18.0],[15.01,18.34],[14.75,17.67]]}, s=document.getElementById("t3");
+  const cols={"Core Anglosphere":"#7B2D4E","Continental Europe":"#17706B","China":"#C0442C","India":"#C08A2C"};
+  const x=v=>14+(v/30)*272, y=v=>128-(v/100)*112;
+  s.appendChild(mk("line",{x1:x(0),y1:y(0),x2:x(30),y2:y(30),stroke:"#647787","stroke-width":".8",
+    "stroke-dasharray":"2 3",opacity:".5"}));
+  for(const g in D){
+    const d=D[g].map((p,i)=>(i?"L":"M")+x(p[0]).toFixed(1)+","+y(p[1]).toFixed(1)).join("");
+    s.appendChild(mk("path",{d,fill:"none",stroke:cols[g],"stroke-width":"1.8",opacity:".85"}));
+    const last=D[g][D[g].length-1];
+    s.appendChild(mk("circle",{cx:x(last[0]).toFixed(1),cy:y(last[1]).toFixed(1),r:"3.4",fill:cols[g]}));
+  }
+})();
+
+/* 3. country paths: five real trajectories, each normalised to its own axis */
+(()=>{
+  const T={"USA":[[0.2465,0.7878],[0.243,0.8182],[0.2404,0.8399],[0.2384,0.8438],[0.2354,0.7649],[0.2329,0.6917],[0.2276,0.6279],[0.2206,0.6218],[0.2148,0.6141],[0.2107,0.6169],[0.2058,0.5897],[0.2011,0.5655],[0.1994,0.523],[0.1972,0.5127],[0.1954,0.5023],[0.1947,0.5133],[0.1921,0.516],[0.1896,0.5199],[0.1883,0.5153],[0.1877,0.5087],[0.1891,0.4934],[0.1884,0.4906],[0.1864,0.476],[0.1858,0.4786],[0.1847,0.475],[0.1826,0.4848]],"UK":[[0.1311,0.5656],[0.131,0.4954],[0.1296,0.4143],[0.1291,0.4245],[0.1256,0.5438],[0.1234,0.6664],[0.1199,0.7266],[0.1173,0.7026],[0.114,0.7023],[0.1095,0.6381],[0.1065,0.6552],[0.1034,0.6338],[0.1018,0.6809],[0.1002,0.6638],[0.0999,0.6827],[0.0988,0.6445],[0.0978,0.6342],[0.0971,0.6162],[0.0951,0.6162],[0.0936,0.6377],[0.0866,0.642],[0.0882,0.6292],[0.0895,0.6045],[0.0869,0.5602],[0.085,0.5793],[0.0834,0.5686]],"China":[[0.2608,0.0136],[0.2758,0.0182],[0.2931,0.0177],[0.3113,0.0284],[0.326,0.0257],[0.3474,0.029],[0.3721,0.019],[0.4036,0.0139],[0.4305,0.0124],[0.4742,0.0129],[0.4988,0.0201],[0.5254,0.0204],[0.5494,0.0294],[0.5734,0.0327],[0.5956,0.0332],[0.6166,0.0285],[0.6378,0.0247],[0.6568,0.029],[0.6766,0.0324],[0.697,0.0452],[0.734,0.0511],[0.7481,0.0573],[0.7444,0.0565],[0.7599,0.0604],[0.7715,0.0762],[0.7834,0.0845]],"India":[[0.4257,0.0],[0.4357,0.0],[0.44,0.0],[0.4578,0.0],[0.4698,0.0057],[0.4847,0.0153],[0.4979,0.0292],[0.5094,0.0303],[0.5107,0.0237],[0.5545,0.0124],[0.5724,0.0081],[0.5797,0.0143],[0.5926,0.0183],[0.6105,0.0323],[0.6338,0.0387],[0.6624,0.0481],[0.6947,0.0542],[0.7147,0.0538],[0.7341,0.0617],[0.7406,0.0646],[0.7182,0.0853],[0.7395,0.1003],[0.7677,0.1086],[0.7971,0.1211],[0.8258,0.1233],[0.8593,0.1341]],"Germany":[[0.8692,0.0855],[0.8627,0.0948],[0.8372,0.0928],[0.8033,0.0705],[0.7728,0.0593],[0.7453,0.0732],[0.7358,0.1158],[0.7195,0.1695],[0.706,0.2615],[0.6713,0.3138],[0.665,0.3245],[0.664,0.2905],[0.6467,0.2817],[0.6287,0.2823],[0.6208,0.3152],[0.6108,0.3327],[0.605,0.3238],[0.5992,0.3262],[0.5845,0.2763],[0.5733,0.262],[0.5657,0.2498],[0.5517,0.2983],[0.542,0.3573],[0.5202,0.3478],[0.5008,0.2963],[0.4857,0.2533]]}, s=document.getElementById("t4");
+  const cols=["#7B2D4E","#A8556E","#C0442C","#C08A2C","#17706B"];
+  const x=v=>14+v*272, y=v=>128-v*112;
+  s.appendChild(mk("line",{x1:x(0),y1:y(0),x2:x(1),y2:y(1),stroke:"#647787","stroke-width":".8",
+    "stroke-dasharray":"2 3",opacity:".5"}));
+  Object.keys(T).forEach((c,k)=>{
+    const d=T[c].map((p,i)=>(i?"L":"M")+x(p[0]).toFixed(1)+","+y(p[1]).toFixed(1)).join("");
+    s.appendChild(mk("path",{d,fill:"none",stroke:cols[k],"stroke-width":"1.6",opacity:".85"}));
+    const last=T[c][T[c].length-1];
+    s.appendChild(mk("circle",{cx:x(last[0]).toFixed(1),cy:y(last[1]).toFixed(1),r:"3.2",fill:cols[k]}));
+  });
+})();
+</script>
+</body>
+</html>
