@@ -10,13 +10,13 @@ Journal Citation Reports.
 | File | What it shows |
 |---|---|
 | `index.html` | Menu page linking to the three visualisations, with thumbnails drawn from the real data |
-| `criminology_journal_explorer.html` | All 74 journals plotted by US authorship share against the number of countries each effectively draws on. Searchable; select a journal for its full regional composition |
 | `criminology_focus_map.html` | World map shaded by how many articles study each country. Select a country for its count, share and rank |
 | `criminology_decoupling.html` | Animated chart tracing four world regions from 2000 to 2025, comparing each one's share of the world economy with its share of criminology authorship |
+| `criminology_country_paths.html` | The same comparison for individual countries, with a dropdown covering the 33 countries that have at least 100 articles in the corpus |
 
 Each file is self-contained: the data is embedded, there is no build step, no server-side
-code and nothing to install. Sizes are 11 KB, 29 KB, 162 KB and 13 KB. The map is larger
-because it carries its own country boundaries.
+code and nothing to install. Sizes run from 11 KB to 162 KB; the map is the largest because
+it carries its own country boundaries.
 
 ## Publishing the pages
 
@@ -44,10 +44,6 @@ excluded, as are non-article document types.
 region is described as holding a share of authorship, that is the share of corresponding
 authors, not of all authors.
 
-**Countries drawn on** (the vertical axis of the journal explorer) is the inverse
-Herfindahl index of author countries. A journal scoring 1 takes essentially all its authors
-from a single country; a journal scoring 10 spreads them as evenly as ten countries would.
-
 **Research focus** (the map) counts an article once for the country it studies, identified
 from its title and abstract by a dictionary validated against independent human coding.
 Articles with no particular country focus, or comparing several, are not mapped. Regional
@@ -56,7 +52,24 @@ subjects such as "the European Union" are excluded. Of 23,619 country-focused ar
 them Hong Kong and Singapore, are in the data but too small to draw at world scale.
 
 **Economic shares** come from the World Bank's World Development Indicators, GDP at
-purchasing power parity, each region's total as a share of the world figure.
+purchasing power parity, each region's or country's total as a share of the world figure.
+Countries appearing in the corpus hold about 96% of world GDP, so these shares do not sum
+to 100.
+
+**The country pages cover 33 countries** — those with at least 100 articles, together 95.9%
+of all authorship. Countries below that threshold are omitted because a year in which one
+publishes two articles rather than none would swing its share wildly; the median country in
+the corpus has thirteen articles across the whole period. The authorship path is smoothed
+with a three-year average for the same reason, while the reported count and share for the
+selected year are unsmoothed.
+
+## Reading the country chart
+
+Both axes rescale to the country shown, and always share a single scale, so the parity line
+stays at forty-five degrees. This keeps small countries legible while preserving the meaning
+of distance from the line: a path below it means a country publishes less criminology than
+its economic size would suggest. The ratio reported in the panel — criminological share
+divided by economic share — is comparable across countries regardless of the axis scale.
 
 ## Two things worth reading carefully
 
