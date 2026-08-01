@@ -20,23 +20,6 @@ Each file is self-contained: the data is embedded, there is no build step, no se
 code and nothing to install. Sizes run from 11 KB to 162 KB; the map is the largest because
 it carries its own country boundaries.
 
-## Publishing the pages
-
-Keep all four files in the same folder — the menu links to the others by relative path.
-
-To publish with GitHub Pages: commit the files, then in the repository go to
-**Settings → Pages**, set *Source* to "Deploy from a branch", and choose your branch and
-either the repository root or a `/docs` folder. The site appears at
-<https://zarina-vakhitova.github.io/criminology_geography/> within a few minutes, landing on
-`index.html`.
-
-Two things to know. Uploading an HTML file to GitHub does not by itself make it viewable —
-without Pages enabled, clicking the file shows its source. And Pages on a private repository
-requires a paid plan; public repositories get it free.
-
-The pages load Fraunces and IBM Plex from Google Fonts, the only external request they make.
-Without a connection they render correctly in fallback typefaces.
-
 ## What the data is
 
 **Corpus.** Every article published 2000–2025 in the 74 sole-category Criminology & Penology
@@ -77,15 +60,12 @@ divided by economic share — is comparable across countries regardless of the a
 ## Two things worth reading carefully
 
 **Grey on the map means no articles, not missing data.** A grey country is one that no
-article in these 74 journals, across twenty-six years, takes as its subject. That is a
-statement about this literature, not about whether research on those places exists
-elsewhere.
+article in these 74 journals, across twenty-six years, takes as its subject. 
 
 **Part of the Anglosphere's apparent decline is a coverage effect.** Web of Science added
 many non-core journals to its index over this period. Within the eleven journals indexed
 continuously since 2000, the Anglosphere share of authorship falls only from 95% to 85%,
-against 95% to 67% across the growing journal set. The decoupling page notes this; it
-matters for how the downward trend should be read.
+against 95% to 67% across the growing journal set. 
 
 ## Licence and reuse
 
